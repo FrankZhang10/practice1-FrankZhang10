@@ -1,0 +1,57 @@
+---
+title: 'Homework 3'
+author: "Jeff Camp"
+date: "2/10/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Due: 2/17/2022 before 11:59pm. Submit in Canvas (file upload).
+
+1. Finish the in-class practice in Slides 3-12 in "Lecture 2-2-Practice for git", link: https://yumouqiu.github.io/DS202-Spring2023/Practice/practice01.html  
+    b. In the RMarkdown file, write down table of team members, and their github repository links;   
+    Joe Faith: https://github.com/JFaith17/practice1-jfaith17  
+    Frank Zhang: https://github.com/FrankZhang10/practice1-FrankZhang10  
+the number of successful pull requests you made, and the github repository to which you requested a change;  
+the number of pull requests you accepted, and the github repository from which you accepted.  
+Successful pull requests: 1  
+Github repo requested a change: Frank's  
+The number of pull requests I accepted: 1  
+The github repo I accepted a change: my own, https://github.com/jeffrcamp/practice1-jeffrcamp  
+
+    c. Write down a list with at least 3 tips of how to make working with git/github easier  
+.1. Be organized!  
+.2. Be careful with what you push back to the main!  
+.3. Make subbranches a lot.  
+
+2. Generate the graph of LifExp vs. gdpPercap for US, Canada (fixed data) and Australia by RMarkdown based on the data set "gapminder-5060", like what we did in the class. 
+  
+  
+```{r}
+library(ggplot2)
+ggplot(aes(x = lifeExp, y = gdpPercap), 
+       data = gapminder.5060.csv[gapminder.5060.csv$country == "Australia",]) + geom_point()
+```
+
+Please use Github to collaborate on this problem. For example, one member can create the plot of US in his/her repository. The other member will fork this repository, add the result for the second country, and make a pull request for merging into the main repository. Each member should at least analyze one country and make at least one pull request. **Please submit the RMarkdown file, the output file, and the screen shot of the successful pull request and the merge.**
+
+3. Write a paragraph (~200 words) describing an example of what you consider data science.
+          ![Gosh Dang](https://th.bing.com/th/id/OIP.cogqJlIn-T15wQNyB92g3AHaDo?pid=ImgDet&rs=1&adlt=strict)
+
+
+Something I consider data science: the analysis of data from various sports leagues, like the NFL or the MLB or the NBA. For example, in these analyses, various attributes of players are observed in order to predict a player’s future performance or growth as a player. This is incredibly important to the longevity of a franchise, and these insights are generated for hundreds if not thousands of different players to find the next Tom Brady or Brady Bargren. Here are some attributes that are studied for correlations to good performance or future growth:  
+- Straight line running speed  
+- Straight line acceleration  
+- Agility  
+Football stats  
+- Yards  
+- Yards / attempt  
+- Efficiency per play  
+- Expected yards per play  
+These attributes and statistics are analyzed for correlations to future growth or current efficiency on the gridiron, and franchises stake millions of dollars in order to analyze these attributes. Additionally, analytics are used for prevention of injury and optimization of exercises and muscle growth for athletes. Last, this is data science since it is the study of data as a means to an end, specifically for football analytics and achievement.
+
+
+For the submission: submit your solution in an **R Markdown file** and (just for insurance) submit the corresponding html (or Word) file with it. 
